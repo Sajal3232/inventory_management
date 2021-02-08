@@ -141,7 +141,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{url('/editor/offer-category/manage')}}" class="nav-link">
+                <a href="{{url('/editor/employee/manage')}}" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Manage</p>
                 </a>

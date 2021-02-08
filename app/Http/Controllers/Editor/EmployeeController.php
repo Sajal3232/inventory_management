@@ -98,8 +98,31 @@ class EmployeeController extends Controller
         $update_data->city = $request->city;
         $update_data->status = $request->status;
         $update_data->save();
-        Toastr::success('message', 'User  add successfully!');
+        Toastr::success('message', 'Employer  add successfully!');
         return redirect('editor/employee/manage');
+    }
+
+    public function delete($id){
+       $employee=Employee::find($id);
+       $employee->delete();
+       Toastr::success('message', 'Employer  delete successfully!');
+        return redirect('editor/employee/manage');
+    }
+    public function inactive($id){
+        $employee=Employee::find($id);
+        $employee->status = 0;
+        $employee->save();
+        Toastr::success('message', 'Employer  Inactive successfully!');
+        return redirect('editor/employee/manage');
+
+    }
+    public function active($id){
+        $employee=Employee::find($id);
+        $employee->status = 1;
+        $employee->save();
+        Toastr::success('message', 'Employer  active successfully!');
+        return redirect('editor/employee/manage');
+
     }
 
 }

@@ -39,6 +39,17 @@ Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middle
     Route::get('/dashboard', [App\Http\Controllers\editor\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/employee/add',[App\Http\Controllers\editor\EmployeeController::class, 'index']);
     Route::post('/employee/save',[App\Http\Controllers\editor\EmployeeController::class, 'save']);
+    Route::get('/employee/manage',[App\Http\Controllers\editor\EmployeeController::class, 'manage']);
+    Route::get('/employee/edit/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'edit']);
+    Route::get('/employee/image/delete/{id}',[App\Http\Controllers\editor\EmployeeController::class,'imagedelete']);
+    Route::post('/employee/update/',[App\Http\Controllers\editor\EmployeeController::class, 'update']);
+    Route::get('/employee/delete/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'delete']);
+    Route::get('/employee/active/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'active']);
+    Route::get('/employee/inactive/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'inactive']);
+
+
+    
+    
 
     Route::get('/logo/add',[App\Http\Controllers\editor\LogoController::class, 'add']);
 });
