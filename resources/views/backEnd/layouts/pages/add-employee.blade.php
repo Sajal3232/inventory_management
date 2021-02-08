@@ -72,7 +72,7 @@
                       <!-- /.form-group -->
                         <div class="col-sm-6">
                             <div class="form-group">
-                              <label>Address <span>*</span></label>
+                              <label>Address <span></span></label>
                               <input type="text" name="address" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" value="{{ old('address') }}">
 
                               @if ($errors->has('address'))
@@ -86,7 +86,7 @@
 
                       <div class="col-sm-6">
                             <div class="form-group">
-                              <label>Experience <span>*</span></label>
+                              <label>Experience <span></span></label>
                               <input type="text" name="experience" class="form-control{{ $errors->has('experience') ? ' is-invalid' : '' }}" value="{{ old('experience') }}">
 
                               @if ($errors->has('experience'))
@@ -99,8 +99,8 @@
                         <!-- form group end -->
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="image">Image <span>*</span></label>
-                                <input type="file" name="image[]" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" value="{{ old('image') }}" multiple="multiple">
+                                <label for="image">Image <span></span></label>
+                                <input type="file" name="image" class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" value="{{ old('image') }}" multiple="multiple">
 
                                 @if ($errors->has('image'))
                                 <span class="invalid-feedback" role="alert">

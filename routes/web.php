@@ -38,6 +38,8 @@ Route::group(['as'=>'admin.', 'prefix'=>'admin', 'namespace'=>'admin','middlewar
 Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middleware'=>['auth', 'editor']], function(){
     Route::get('/dashboard', [App\Http\Controllers\editor\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/employee/add',[App\Http\Controllers\editor\EmployeeController::class, 'index']);
+    Route::post('/employee/save',[App\Http\Controllers\editor\EmployeeController::class, 'save']);
+
     Route::get('/logo/add',[App\Http\Controllers\editor\LogoController::class, 'add']);
 });
 
