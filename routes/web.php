@@ -37,6 +37,8 @@ Route::group(['as'=>'admin.', 'prefix'=>'admin', 'namespace'=>'admin','middlewar
 });
 Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middleware'=>['auth', 'editor']], function(){
     Route::get('/dashboard', [App\Http\Controllers\editor\DashboardController::class, 'index'])->name('dashboard');
+
+    // employee section
     Route::get('/employee/add',[App\Http\Controllers\editor\EmployeeController::class, 'index']);
     Route::post('/employee/save',[App\Http\Controllers\editor\EmployeeController::class, 'save']);
     Route::get('/employee/manage',[App\Http\Controllers\editor\EmployeeController::class, 'manage']);
@@ -46,6 +48,22 @@ Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middle
     Route::get('/employee/delete/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'delete']);
     Route::get('/employee/active/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'active']);
     Route::get('/employee/inactive/{id}',[App\Http\Controllers\editor\EmployeeController::class, 'inactive']);
+
+    // customer section
+
+    Route::get('/customer/add',[App\Http\Controllers\editor\CustomerController::class, 'index']);
+    Route::post('/customer/save',[App\Http\Controllers\editor\CustomerController::class, 'save']);
+    Route::get('/customer/manage',[App\Http\Controllers\editor\CustomerController::class, 'manage']);
+    Route::get('/customer/view/{id}',[App\Http\Controllers\editor\CustomerController::class, 'customerview']);
+    Route::get('/customer/edit/{id}',[App\Http\Controllers\editor\CustomerController::class, 'customeredit']);
+    Route::get('/customer/image/delete/{id}',[App\Http\Controllers\editor\CustomerController::class,'imagedelete']);
+    Route::post('/customer/update/',[App\Http\Controllers\editor\CustomerController::class, 'customerupdate']);
+    Route::get('/customer/delete/{id}',[App\Http\Controllers\editor\CustomerController::class, 'delete']);
+
+
+
+
+
 
 
     

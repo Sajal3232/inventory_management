@@ -104,6 +104,8 @@ class EmployeeController extends Controller
 
     public function delete($id){
        $employee=Employee::find($id);
+       $photo=$employee->image;
+       unlink($photo);
        $employee->delete();
        Toastr::success('message', 'Employer  delete successfully!');
         return redirect('editor/employee/manage');
