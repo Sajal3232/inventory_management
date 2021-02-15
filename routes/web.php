@@ -59,7 +59,17 @@ Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middle
     Route::get('/customer/image/delete/{id}',[App\Http\Controllers\editor\CustomerController::class,'imagedelete']);
     Route::post('/customer/update/',[App\Http\Controllers\editor\CustomerController::class, 'customerupdate']);
     Route::get('/customer/delete/{id}',[App\Http\Controllers\editor\CustomerController::class, 'delete']);
+    
+    //supplier section
 
+    Route::get('/supplier/add',[App\Http\Controllers\editor\SupplierController::class, 'index']);
+    Route::post('/supplier/save',[App\Http\Controllers\editor\SupplierController::class, 'save']);
+    Route::get('/supplier/manage',[App\Http\Controllers\editor\SupplierController::class, 'manage']);
+    Route::get('/supplier/view/{id}',[App\Http\Controllers\editor\SupplierController::class, 'supplierview']);
+    Route::get('/supplier/edit/{id}',[App\Http\Controllers\editor\SupplierController::class, 'supplieredit']);
+    Route::get('/supplier/image/delete/{id}',[App\Http\Controllers\editor\SupplierController::class,'imagedelete']);
+    Route::post('/supplier/update/',[App\Http\Controllers\editor\SupplierController::class, 'supplierupdate']);
+    Route::post('/supplier/delete/{id}',[App\Http\Controllers\editor\SupplierController::class, 'supplierdelete']);
 
 
 

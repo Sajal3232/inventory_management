@@ -177,6 +177,31 @@
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
+            <i class="fa fa-user"></i>
+              <p>
+                Supplier
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('/editor/supplier/add')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Add </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/editor/supplier/manage')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Manage</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- nav item end -->
+
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
               <i class="fa fa-apple"></i>
               <p>
                 Offer Category
