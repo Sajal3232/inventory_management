@@ -199,6 +199,30 @@
             </ul>
           </li>
           <!-- nav item end -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+            <i class="fa fa-user"></i>
+              <p>
+                Salary
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('/editor/salary/advanced')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Add Advanced </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/editor/advancedsalary/manage')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Advanced salary Manage</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- nav item end -->
 
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

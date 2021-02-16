@@ -71,13 +71,20 @@ Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middle
     Route::post('/supplier/update/',[App\Http\Controllers\editor\SupplierController::class, 'supplierupdate']);
     Route::post('/supplier/delete/{id}',[App\Http\Controllers\editor\SupplierController::class, 'supplierdelete']);
 
+    //salary section
+    Route::get('/salary/advanced',[App\Http\Controllers\editor\SalaryController::class, 'index']);
+    Route::post('/advanced_salary/save',[App\Http\Controllers\editor\SalaryController::class, 'advancedsave']);
+    Route::get('/advancedsalary/manage',[App\Http\Controllers\editor\SalaryController::class, 'allsalarymanage']);
+    Route::get('/advancedsalary/edit/{id}',[App\Http\Controllers\editor\SalaryController::class, 'editadvancedsalary']);
+    Route::get('/advancedsalary/delete/{id}',[App\Http\Controllers\editor\SalaryController::class, 'deleteadvancedsalary']);
+    Route::post('/advanced_salary/update',[App\Http\Controllers\editor\SalaryController::class, 'advancedupdate']);
 
 
 
 
 
-    
-    
+
+
 
     Route::get('/logo/add',[App\Http\Controllers\editor\LogoController::class, 'add']);
 });
