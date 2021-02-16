@@ -220,6 +220,18 @@
                   <p>Advanced salary Manage</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{url('/editor/pay_salary')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Pay Salary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/editor/advancedsalary/manage')}}" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Last Month Salary</p>
+                </a>
+              </li>
             </ul>
           </li>
           <!-- nav item end -->

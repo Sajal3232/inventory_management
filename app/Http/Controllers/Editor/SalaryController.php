@@ -86,4 +86,9 @@ class SalaryController extends Controller
          return redirect('editor/advancedsalary/manage/');
     }
 
+    public function paysalary(){
+        $employess=Employee::all();
+        return view('backEnd.salary.paysalary',compact('employess'));
+    }
+
 }

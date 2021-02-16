@@ -78,6 +78,8 @@ Route::group(['as'=>'editor.', 'prefix'=>'editor', 'namespace'=>'editor','middle
     Route::get('/advancedsalary/edit/{id}',[App\Http\Controllers\editor\SalaryController::class, 'editadvancedsalary']);
     Route::get('/advancedsalary/delete/{id}',[App\Http\Controllers\editor\SalaryController::class, 'deleteadvancedsalary']);
     Route::post('/advanced_salary/update',[App\Http\Controllers\editor\SalaryController::class, 'advancedupdate']);
+    Route::get('/pay_salary',[App\Http\Controllers\editor\SalaryController::class, 'paysalary']);
+
 
 
 
